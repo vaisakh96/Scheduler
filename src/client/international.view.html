@@ -1,0 +1,25 @@
+<section id="calcapp" ng-controller="interCtrl as ctrl" class="container">
+        <section id="input-one" class="input-one">
+                <form id="form-one" class="form-class">
+                        Source:
+                        <tf-dropdown-select ng-model="$ctrl.sourceSelected">
+                            <tf-dropdown-select-item ng-repeat="source in $ctrl.source" value="source"> {{ source }} </tf-dropdown-select-item>
+                        </tf-dropdown-select>
+                        
+                        Destination:
+                        <tf-dropdown-select ng-model="$ctrl.destSelected">
+                                <tf-dropdown-select-item ng-repeat="dest in $ctrl.dest" value="dest"> {{ dest }} </tf-dropdown-select-item>
+                            </tf-dropdown-select>            
+                    Flight Name <input type="text" ng-model="$ctrl.FName" required=''>
+                   Flight Departure Time: <input type="text" ng-model="$ctrl.Time" required=''>
+                   Time of Flight: <input type="text" ng-model="$ctrl.FTime" required=''>
+                    <tf-button ng-click="$ctrl.addItem()">Add</tf-button>
+                </form>
+            </section>
+            <p>The output is: <span ng-bind="$ctrl.output"></p>
+    
+            <tg-grid grid-height="400" grid-width="1200">
+                <tg-columns source="$ctrl.columns"></tg-columns>
+                <tg-rows source="$ctrl.rows"></tg-rows>
+            </tg-grid>            
+    </section>

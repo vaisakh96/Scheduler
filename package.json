@@ -1,0 +1,37 @@
+{
+  "name": "@fds/anuglar-training",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "publishConfig": {
+    "registry": "http://artifactory.factset.com/artifactory/api/npm/npm-fds"
+  },
+  "devDependencies": {
+    "@fds/angular-app-build": "^0.8.5",
+    "jasmine": "^3.0.0"
+  },
+  "scripts": {
+    "start": "aab start",
+    "start:dev": "aab start --development",
+    "dev": "aab dev",
+    "clean": "aab clean",
+    "fix-style": "aab fix-style",
+    "lint": "aab lint",
+    "build": "aab build",
+    "build:dev": "aab build --development",
+    "test": "aab test",
+    "heroku-postbuild": "yarn build",
+    "clean:all": "yarn clean && rm -rf node_modules"
+  },
+  "dependencies": {
+    "@fds/thief-angular": "^2.23.0",
+    "@fds/thief-angular-grid": "^2.0.1",
+    "@uirouter/angularjs": "^1.0.15",
+    "axios": "^0.18.0"
+  }
+}

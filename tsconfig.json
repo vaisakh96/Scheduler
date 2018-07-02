@@ -1,0 +1,3 @@
+{
+  "extends": "./.aab/tsconfig-base.json"
+}

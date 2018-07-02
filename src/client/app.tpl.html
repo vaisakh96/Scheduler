@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body class="container">
+  <div class="row">
+      <tf-app-header>
+          <tf-app-header-primary>Welcome to Angular Training</tf-app-header-primary>
+          <tf-checkbox ng-model="$ctrl.veg" tf-disabled="$ctrl.nveg">Domestic</tf-checkbox>
+          <tf-checkbox ng-model="$ctrl.nveg" tf-disabled="$ctrl.veg">International</tf-checkbox>
+      </tf-app-header>
+  </div>
+  <div class="row" ng-if="!$ctrl.veg && !$ctrl.nveg">
+    <main-component></main-component>
+  </div>
+  <div class="row" ng-if="$ctrl.veg">
+    <domes-component></domes-component>
+  </div>
+  <div class="row" ng-if="$ctrl.nveg">
+      <inter-component></inter-component>
+  </div>
+  
+</body>
+</html>
