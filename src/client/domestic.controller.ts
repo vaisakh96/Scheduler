@@ -1,11 +1,21 @@
 import mainCtrl from './main.controller';
 
 export default class domesCtrl{
-    constructor(){
+  options: object;
+    constructor()
+    {
         this.source = ['Mumbai','Delhi','Kolkota','Cochin','Hyderabad'];
         this.dest = ['Mumbai','Delhi','Kolkota','Cochin','Hyderabad'];
         this.num = 2;
+      
+        this.options = 
+        {
+          frozenRow : 1,
+          frozenColumn : 1,
+        };
+  
     }
+    
     public num : number;
     public FName : string;
     public id : number;
@@ -81,6 +91,5 @@ export default class domesCtrl{
         Time:this.Time,
         FTime:this.FTime};
         this.rows = this.rows.concat(newEle);
-
     }
 } 

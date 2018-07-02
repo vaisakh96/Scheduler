@@ -8,7 +8,7 @@
                         
                         Destination:
                         <tf-dropdown-select ng-model="$ctrl.destSelected">
-                                <tf-dropdown-select-item ng-repeat="dest in $ctrl.dest" value="dest"> {{ dest }} </tf-dropdown-select-item>
+                                <tf-dropdown-select-item ng-repeat="dest in $ctrl.dest" ng-if="dest!=$ctrl.sourceSelected" value="dest"> {{ dest }} </tf-dropdown-select-item>
                             </tf-dropdown-select>            
                     Flight Name <input type="text" ng-model="$ctrl.FName" required=''>
                    Flight Departure Time: <input type="text" ng-model="$ctrl.Time" required=''>
